@@ -1,0 +1,22 @@
+---
+- name: lab backup script
+  gather_facts: no
+  hosts: all
+  vars:
+    provider_nxos:
+      host: "{{ inventory_hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      transport: nxapi
+      use_ssl: no
+      validate_certs:  false
+    provider_ios:
+      host: "{{ inventory_hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+    ansible_python_interpreter: python
+
+  roles:
+    - nxosbackup
+    - iosbackup
+

@@ -1,0 +1,8 @@
+---
+# tasks file for iosbackup
+  - name: backup IOS devices
+    hosts: ios
+    ios_config:
+      provider: "{{ provider_ios }}"
+      backup: yes
+    when: "'ios' in group_names"

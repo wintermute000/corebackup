@@ -1,0 +1,20 @@
+[nxos]
+lab-dc1-cnt-core-sw-01
+lab-dc1-cnt-core-sw-02
+lab-dc1-cnt-core-sw-03
+lab-dc1-cnt-core-sw-04
+lab-dc3-cnt-core-sw-01
+lab-dc3-cnt-core-sw-02
+lab-dc3-cnt-core-sw-03
+lab-dc3-cnt-core-sw-04
+
+[ios]
+lab-dc1-external-rtr-01
+lab-dc1-external-rtr-02
+lab-dc3-external-rtr-01
+lab-dc3-external-rtr-02
+
+[all:vars]
+ansible_connection = local
+username="admin"
+password="admin123"
